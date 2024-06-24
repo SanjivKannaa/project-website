@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-left: 20px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700; /* Change to your preferred hover color */
+        }
+
+        main {
+            padding-top: 100px; /* adjust according to header height */
+        }
+
+        #hero {
+            background-color: #1a73e8; /* Darker blue */
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 12px; /* Rounded corners */
+        }
+
+        #hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        #hero ul {
+            list-style-type: none; /* Remove default list bullets */
+            padding: 0;
+        }
+
+        #hero ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        #hero ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        #hero ul li a:hover {
+            color: #ffd700; /* Change to your preferred hover color */
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .project-card p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .project-card a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            font-size: 1.2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>My Projects</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#internship_and_hackathons">Internship and Hackathons</a></li>
+                    <li><a href="#club_projects">Projects with Spider R&D</a></li>
+                    <li><a href="#personal_projects">Personal Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="home">
+        <section id="hero">
+            <div class="container">
+                <h1>Welcome to My Projects Page</h1>
+                <h2>To view my portfolio visit:</h2>
+                <ul>
+                    <li><a href="http://portfolio.magickite.tech">My GUI Portfolio</a></li>
+                    <li><a href="http://cli.magickite.tech">My CLI Portfolio</a></li>
+                </ul>
+            </div>
+        </section>
+       
+
+        <!-- internship and hackathon Section -->
+        <section id="internship_and_hackathons">
+            <br><br><br><br>
+            <div class="container">
+                <h2 style="font-size: 42px;">Internship and Hackathons</h2>
+                <br>
+                <div class="project-card">
+                    <h3>Post-Quantum Network Scanner</h3>
+                    <p>Summer Internship at NTU Singapore</p>
+                    <a href="/pqc" target="_self">Visit Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Data Compression | Smart India Hachathon 2023</h3>
+                    <p>Winners of Smart India Hackathon 2023</p>
+                    <a href="/sih23" target="_self">Visit Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>NoCaine | DarkWeb Crawler</h3>
+                    <p>Winners of RACCAM '24, Participated in Kavach '23 Grand Finale</p>
+                    <a href="/nocaine" target="_self">Visit Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- spider R&D Section -->
+        <section id="club_projects">
+            <br><br><br><br>
+            <div class="container">
+                <h2 style="font-size: 42px;">Projects I have worked on in <a href="https://spider.nitt.edu">Spider R&D</a></h2>
+                <br>
+                <div class="project-card">
+                    <h3>Sport's Registration Portal</h3>
+                    <p>The official Gym/Swimming Pool Registration portal of NITT</p>
+                    <a href="/gym_reg" target="_self">Visit Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Spider VPN</h3>
+                    <p>Virtual Private Network for the developers of Spider R&D to access documentation and admin panels</p>
+                    <a href="/spider-vpn" target="_self">Visit Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>On-premise server setup</h3>
+                    <p></p>
+                    <a href="/olympus" target="_self">Visit Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Sportsfete.org</h3>
+                    <p>Live betting game during sportsfete events</p>
+                    <a href="/sportsfete" target="_self">Visit Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>profnitt</h3>
+                    <p>Web-Hosting</p>
+                    <a href="/profnitt" target="_self">Visit Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- internship and hackathon Section -->
+        <section id="personal_projects">
+            <br><br><br><br>
+            <div class="container">
+                <h2 style="font-size: 42px;">My Personal Projects</h2>
+                <br>
+                <div class="project-card">
+                    <h3>ChaosBank | SRE project</h3>
+                    <p>Personal Project on the domain of DevOps+SRE</p>
+                    <a href="/chaosbank" target="_self">Visit Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Gas Leakage Detection System | Embedded System Project</h3>
+                    <p>Personal Project on the domain of Embedded Systems</p>
+                    <a href="/embedded-project" target="_self">Visit Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>ML based screen time browser extension</h3>
+                    <p>Personal Project on the domain of Machine Learning</p>
+                    <a href="/AIML" target="_self">Visit Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Chat Application</h3>
+                    <p>Socket Programming based Chat Application</p>
+                    <a href="/socket-programming" target="_self">Visit Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Password Manager Website</h3>
+                    <p>Password Manager Website</p>
+                    <a href="/password-manager-web" target="_self">Visit Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Expense Manager Web</h3>
+                    <p>Web based Expense Manager Tool</p>
+                    <a href="/expense-manager" target="_self">Visit Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Password Manager CLI</h3>
+                    <p>CLI based password manager</p>
+                    <a href="/password-manager-cli" target="_self">Visit Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Shop billing application</h3>
+                    <p>CLI base Shop billing application</p>
+                    <a href="/billing-app" target="_self">Visit Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
