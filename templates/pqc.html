@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Post-Quantum Network Scanner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* Reset and basic styles */
         /* Reset and basic styles */
         * {
             margin: 0;
@@ -16,14 +18,16 @@
             font-family: 'Roboto', Arial, sans-serif;
             line-height: 1.6;
             background-color: #f0f0f0;
+            padding-top: 100px; /* Adjust for header height */
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
         }
 
+        /* Header styles */
         header {
             background-color: #333;
             color: #fff;
@@ -35,10 +39,12 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        header h1 {
+        header h1 a {
             font-size: 1.8rem;
             margin-left: 20px;
             font-weight: 700;
+            color: white;
+            text-decoration: none;
         }
 
         nav ul {
@@ -63,103 +69,106 @@
             color: #ffd700; /* Change to your preferred hover color */
         }
 
-        main {
-            padding-top: 100px; /* adjust according to header height */
-        }
-
-        #hero {
+        /* Hero Section styles */
+        .hero-section {
             background-color: #1a73e8; /* Darker blue */
             color: #fff;
             padding: 80px 0;
-            text-align: center;
-            border-radius: 12px; /* Rounded corners */
+            text-align: center; /* Center align for hero section */
+            border-radius: 12px;
+            margin-bottom: 40px;
         }
 
-        #hero h2 {
+        .hero-section h2 {
             font-size: 3rem;
             margin-bottom: 20px;
         }
 
-        #hero p {
+        .hero-section p {
             font-size: 1.2rem;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
-        #hero ul {
-            list-style-type: none; /* Remove default list bullets */
-            padding: 0;
-        }
-
-        #hero ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        #hero ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        #hero ul li a:hover {
-            color: #ffd700; /* Change to your preferred hover color */
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .project-card {
+        /* Content Section styles */
+        .content-section {
             background-color: #fff;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            display: flex;
+            align-items: flex-start; /* Ensure alignment to the start */
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+        .content-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
             font-weight: 700;
         }
 
-        .project-card p {
+        .content-section p {
             font-size: 1.2rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            text-align: left; /* Ensure text is left aligned */
         }
 
-        .project-card a {
-            display: inline-block;
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
+        .content-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
 
-        .project-card a:hover {
-            background-color: #555;
+        .content-section ul li {
+            margin-bottom: 10px;
         }
 
+        /* Image Container styles */
+        .image-container {
+            flex: 1;
+            text-align: right; /* Align image to the right */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text Container styles */
+        .text-container {
+            flex: 1;
+            margin-right: 20px;
+            text-align: left; /* Align text to the left */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+                text-align: left; /* Ensure text is left aligned in small screens */
+            }
+
+            .text-container, .image-container {
+                margin-right: 0;
+                margin-top: 20px;
+            }
+
+            .image-container {
+                text-align: center; /* Center align images in small screens */
+            }
+        }
+
+        /* Footer styles */
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px 0;
-            position: absolute;
+            position: relative;
             width: 100%;
             bottom: 0;
             font-size: 1.2rem;
+            margin-top: 20px;
         }
 
     </style>
@@ -168,151 +177,84 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <h1>My Projects</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#internship_and_hackathons">Internship and Hackathons</a></li>
-                    <li><a href="#club_projects">Projects with Spider R&D</a></li>
-                    <li><a href="#personal_projects">Personal Projects</a></li>
-                </ul>
-            </nav>
+            <h1><a href="/">My Projects</a></h1>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="home">
-        <section id="hero">
-            <div class="container">
-                <h1>Welcome to My Projects Page</h1>
-                <h2>To view my portfolio visit:</h2>
-                <ul>
-                    <li><a href="http://portfolio.magickite.tech">My GUI Portfolio</a></li>
-                    <li><a href="http://cli.magickite.tech">My CLI Portfolio</a></li>
-                </ul>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h2>Post-Quantum Network Scanner</h2>
+            <p>Summer Internship at NTU Singapore</p>
+            <p>Exploring the future of cybersecurity with post-quantum cryptography.</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="content-section">
+        <div class="container">
+            <div class="text-container">
+                <h3>Introduction</h3>
+                <p>The Post-Quantum Network Scanner is an innovative project aimed at enhancing cybersecurity by leveraging post-quantum cryptographic algorithms. This project was undertaken during my summer internship at NTU Singapore, focusing on the challenges posed by quantum computing to current cryptographic systems. The project's goal is to develop a network scanner that can capture and analyze network traffic, assessing the security of cryptographic algorithms in use and their readiness for a post-quantum world.</p>
             </div>
-        </section>
-       
-
-        <!-- internship and hackathon Section -->
-        <section id="internship_and_hackathons">
-            <br><br><br><br>
-            <div class="container">
-                <h2 style="font-size: 42px;">Internship and Hackathons</h2>
-                <br>
-                <div class="project-card">
-                    <h3>Post-Quantum Network Scanner</h3>
-                    <p>Summer Internship at NTU Singapore</p>
-                    <a href="/pqc" target="_self">Visit Project</a>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Data Compression | Smart India Hachathon 2023</h3>
-                    <p>Winners of Smart India Hackathon 2023</p>
-                    <a href="/sih23" target="_self">Visit Project</a>
-                </div>
-                
-                <div class="project-card">
-                    <h3>NoCaine | DarkWeb Crawler</h3>
-                    <p>Winners of RACCAM '24, Participated in Kavach '23 Grand Finale</p>
-                    <a href="/nocaine" target="_self">Visit Project</a>
-                </div>
+            <div class="image-container">
+                <img src="static/pqc1.jpeg" alt="Dashboard Screenshot">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- spider R&D Section -->
-        <section id="club_projects">
-            <br><br><br><br>
-            <div class="container">
-                <h2 style="font-size: 42px;">Projects I have worked on in <a href="https://spider.nitt.edu">Spider R&D</a></h2>
-                <br>
-                <div class="project-card">
-                    <h3>Sport's Registration Portal</h3>
-                    <p>The official Gym/Swimming Pool Registration portal of NITT</p>
-                    <a href="/gym_reg" target="_self">Visit Project</a>
-                </div>
+    <!-- Objectives Section -->
+    <section id="objectives" class="content-section">
+        <div class="container">
+            <h3>Objectives</h3>
+            <p>The primary objectives of the Post-Quantum Network Scanner project are:</p>
+            <ul>
+                <li>To develop a tool that can scan network traffic and identify the cryptographic algorithms being used.</li>
+                <li>To evaluate the security of these algorithms in the context of post-quantum computing.</li>
+                <li>To provide insights and recommendations for organizations on transitioning to post-quantum cryptography.</li>
+            </ul>
+        </div>
+    </section>
 
-                <div class="project-card">
-                    <h3>Spider VPN</h3>
-                    <p>Virtual Private Network for the developers of Spider R&D to access documentation and admin panels</p>
-                    <a href="/spider-vpn" target="_self">Visit Project</a>
-                </div>
+    <!-- Technologies Section -->
+    <section id="technologies" class="content-section">
+        <div class="container">
+            <h3>Technologies Used</h3>
+            <ul>
+                <li>Python</li>
+                <li>Post-Quantum Wireshark</li>
+                <li>Electron JS</li>
+                <li>Docker</li>
+            </ul>
+        </div>
+    </section>
 
-                <div class="project-card">
-                    <h3>On-premise server setup</h3>
-                    <p></p>
-                    <a href="/olympus" target="_self">Visit Project</a>
-                </div>
+    <!-- Methodology Section -->
+    <section id="methodology" class="content-section">
+        <div class="container">
+            <h3>Methodology</h3>
+            <p>The project was conducted using a structured approach involving the following steps:</p>
+            <ul>
+                <li><strong>Research:</strong> Comprehensive research was conducted on existing cryptographic algorithms and the impact of quantum computing on their security.</li>
+                <li><strong>Design:</strong> A network scanner was designed to be used as a centralized system for an enterprise/campus network.</li>
+                <li><strong>Implementation:</strong> Authorization and user management were integrated into the network scanner.</li>
+                <li><strong>Testing:</strong> Extensive testing was carried out to evaluate the performance and security of the application.</li>
+                <li><strong>Analysis:</strong> The results were analyzed to provide insights into the readiness of current cryptographic systems for a post-quantum era.</li>
+            </ul>
+        </div>
+    </section>
 
-                <div class="project-card">
-                    <h3>Sportsfete.org</h3>
-                    <p>Live betting game during sportsfete events</p>
-                    <a href="/sportsfete" target="_self">Visit Project</a>
-                </div>
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="content-section">
+        <div class="container">
+            <h3>Conclusion</h3>
+            <p>The Post-Quantum Network Scanner project highlights the critical need for organizations to prepare for the challenges posed by quantum computing. By adopting post-quantum cryptographic algorithms, businesses can protect sensitive data and ensure secure communications in a future where quantum computers may compromise current encryption methods.</p>
+        </div>
+    </section>
 
-                <div class="project-card">
-                    <h3>profnitt</h3>
-                    <p>Web-Hosting</p>
-                    <a href="/profnitt" target="_self">Visit Project</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- internship and hackathon Section -->
-        <section id="personal_projects">
-            <br><br><br><br>
-            <div class="container">
-                <h2 style="font-size: 42px;">My Personal Projects</h2>
-                <br>
-                <div class="project-card">
-                    <h3>ChaosBank | SRE project</h3>
-                    <p>Personal Project on the domain of DevOps+SRE</p>
-                    <a href="/chaosbank" target="_self">Visit Project</a>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Gas Leakage Detection System | Embedded System Project</h3>
-                    <p>Personal Project on the domain of Embedded Systems</p>
-                    <a href="/embedded-project" target="_self">Visit Project</a>
-                </div>
-                
-                <div class="project-card">
-                    <h3>ML based screen time browser extension</h3>
-                    <p>Personal Project on the domain of Machine Learning</p>
-                    <a href="/AIML" target="_self">Visit Project</a>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Chat Application</h3>
-                    <p>Socket Programming based Chat Application</p>
-                    <a href="/socket-programming" target="_self">Visit Project</a>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Password Manager Website</h3>
-                    <p>Password Manager Website</p>
-                    <a href="/password-manager-web" target="_self">Visit Project</a>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Expense Manager Web</h3>
-                    <p>Web based Expense Manager Tool</p>
-                    <a href="/expense-manager" target="_self">Visit Project</a>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Password Manager CLI</h3>
-                    <p>CLI based password manager</p>
-                    <a href="/password-manager-cli" target="_self">Visit Project</a>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Shop billing application</h3>
-                    <p>CLI base Shop billing application</p>
-                    <a href="/billing-app" target="_self">Visit Project</a>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Projects. All rights reserved.</p>
+    </footer>
 </body>
 </html>
